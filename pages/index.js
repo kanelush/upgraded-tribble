@@ -9,7 +9,7 @@ import { CartProvider } from "../context/CartContext";
 import React from "react";
 import PropTypes from 'prop-types';
 
-export default function Home() {
+export default function Home(productos) {
 
 
 
@@ -26,4 +26,15 @@ export default function Home() {
 
     </>
   )
+}
+
+export async function getServerSideProps() {
+  const response = await fetch('https://chillin.cl/api/productos')
+  const data = await response.json()
+  console.log("Data from ServerSide props", response);
+  return {
+    props: {
+      productos: data
+    }
+  }
 }

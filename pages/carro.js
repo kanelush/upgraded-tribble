@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import CartContext from '../context/CartContext'
 import Link from 'next/link'
 import { Table } from '../components/Table'
-
+import { UserData } from '../components/UserData'
 
 
 //Carro Page component> 
@@ -15,8 +15,6 @@ const Carro = () => {
     return total + item.price * item.quantity
   }, 0)
   
-  const [go, setGo] = useState('')
-
   return (
     <>
     <div className="container bg-slate-200 py-20">

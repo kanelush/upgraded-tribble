@@ -8,6 +8,7 @@ import CartContext from "../context/CartContext";
 import { useState } from "react";
 import { CartProvider } from "../context/CartContext";
 
+
 export const ProductsAll = () => {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
   const { data, error } = useSWR('https://chillin.cl/api/productos', fetcher);
@@ -59,7 +60,7 @@ export const ProductsAll = () => {
           <div className="h-full rounded-xl shadow-cla-blue bg-gradient-to-r from-indigo-50 to-blue-50 overflow-hidden">
             
          <Link href="/bongs/[id]" as={`/bongs/${producto.id}`}>
-            <img width="50px" height="50px" className="lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-100" src={`http://127.0.0.1:8000${producto.image}`} alt="blog"/>
+            <img width="50px" height="50px" className="lg:h-48 md:h-36 w-full object-cover object-center scale-110 transition-all duration-400 hover:scale-100" src={`https://chillin.cl/${producto.image}`} alt="blog"/>
             </Link>
             <div className="p-6">
               <h1 className="title-font text-lg font-medium text-gray-600 mb-3">{ producto.name }</h1>

@@ -65,7 +65,7 @@ const SingleNegocioPage = ({ producto }) => {
     
     <h1 className='text-2xl'>xd</h1>
     <div className="lg:w-4/5 mx-auto flex flex-wrap">
-      <img alt="ecommerce" className="hover:scale-105 transition-all lg:w-1/2 w-full object-cover object-center rounded border border-gray-200" src={`http://127.0.0.1:8000${producto.image}`} />
+      <img alt="ecommerce" className="hover:scale-105 transition-all lg:w-1/2 w-full object-cover object-center rounded border border-gray-200" src={`https://chillin.cl/${producto.image}`} />
       
       <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
         <h2 className="text-sm title-font text-gray-500 tracking-widest">bongasos.cl</h2>

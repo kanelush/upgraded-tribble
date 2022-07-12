@@ -15,7 +15,6 @@ export function CartProvider({children}){
     // const tet = tot.reduce(reducer)
 
     const [quanty, setQuanty] = useState()
-
    
 
 
@@ -24,6 +23,8 @@ export function CartProvider({children}){
             return acc + curr
         })
     }
+
+      //handleIncrement quantity
 
     const handleIncrement = () => {
         if(quantity > 0) {
